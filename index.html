@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,20 +15,74 @@
 <body>
 
 <div id="slides">
+    <div class="overlay">
+
+    </div>
     <div class="slides-container">
-        <img src="https://static.toiimg.com/thumb/44945488/Nice-in-pictures.jpg?width=748&height=499" alt="">
-        <img src="https://lifepolicyshopper.com/wp-content/uploads/2017/03/Final-Expense-Life-Insurance-Policy-with-COPD-in-the-District-of-Columbia-1.jpg" alt="">
-        <img src="https://amazingpict.com/wp-content/uploads/2013/12/Beach-Computer-Wallpaper.jpg" alt="">
+            <img src="https://static.toiimg.com/thumb/44945488/Nice-in-pictures.jpg?width=748&height=499" alt="">
+            <img src="https://lifepolicyshopper.com/wp-content/uploads/2017/03/Final-Expense-Life-Insurance-Policy-with-COPD-in-the-District-of-Columbia-1.jpg" alt="">
+            <img src="https://amazingpict.com/wp-content/uploads/2013/12/Beach-Computer-Wallpaper.jpg" alt="">
+
+    </div>
+
+    <div class="titleMessage ">
+        <div class="heading ">
+            <p class="main ">DAMIAN JONIEC</p>
+            <p class="sub typed "> </p>
+
+        </div>
 
     </div>
     <nav class="slides-navigation">
-        <a href="#" class="next"></a>
-        <a href="#" class="prev"></a>
+            <a href="#" class="next"></a>
+            <a href="#" class="prev"></a>
     </nav>
 </div>
-<script src="js/jquery.superslides.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+<div id="about" class="section">
+    <div class="container">
+            <div class="row">
+                    <div class="col-md-5"> 
+                        <img class="aboutImage" src="img/aboutphoto.jpg">
+                    </div>
+                    <div class="col-md-7">
+                        <h4>My name is Damian Joniec.</h4>
+                        <p>Hi there! I'm Damian Joniec from London, England. I have many years experience creating software, mobile apps and websites for both myself, and for clients. I have experience programming in many different languages such as JavaScript, C++, PHP and Solidity, however some of my favourite projects involve working in blockchain technologies.</p>
+                    </div>
+                </div>
+    </div>
+    
+</div>
+
+<div id="skills" class="skillsSection section">
+        <div class="container">
+                <div class="row">
+                       <div class="col-md-12 text-center">
+                           <h2>TECHNICAL SKILLS</h2>
+                           <p>A representation of my proficiency in each skill</p>
+                       </div>
+
+                       <div class="owl-carousel owl-theme">
+                            <div class="skill">
+                                <span class="chart" data-percent="67">
+                                    <span class="percent">67</span>
+                                    <canvas height="152" width="152"></canvas>
+                                </span>
+                                <h4>JavaScript</h4>
+                                <p>Used in most of my web based projects</p>
+                            </div>
+                        </div>
+
+                    </div>
+        </div>
+        
+</div>
+
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
