@@ -1,3 +1,17 @@
+$(window).on("load", function(){
+   $(".loader .inner").fadeOut(500 , function(){
+       $(".loader").fadeOut(750);
+   });
+
+   $(".items").isotope({
+      filter:'*',
+      animationOptions: {
+         duration: 1500,
+         easing: 'linear',
+         queue: false
+      }
+   });
+});
 $(document).ready(function () {
    $('#slides').superslides({
       animation:'fade',
@@ -65,15 +79,6 @@ $(window).scroll(function(){
 });  
    $("[data-fancybox]").fancybox();
 
-   $(".items").isotope({
-      filter:'*',
-      animationOptions: {
-         duration: 1500,
-         easing: 'linear',
-         queue: false
-      }
-   });
-
    $("#filters a").click(function(){
       $("#filters .current").removeClass("current");
       $(this).addClass("current");
@@ -88,7 +93,39 @@ $(window).scroll(function(){
             queue: false
          }
       });
-      return false;
+     return false;
    });
 
+
+
+   function changeYear() {
+      var paragraph = document.querySelector('.getFullYear');
+     paragraph.innerHTML = `&copy; Copyright Damian Joniec ${new Date().getFullYear()}`;
+    }
+    changeYear();
+
+    $("#navigation li a").click(function(e){
+      e.preventDefault();
+      
+      let targetElement = $(this).attr("href");
+      let targetPosition = $(targetElement).offset().top;
+      $("html, body").animate({scrollTop: targetPosition - 80 }, "slow");
+    });
+
+
+    const nav = $("#navigation");
+    const navTop = nav.offset().top;
+    $(window).on("scroll", stickyNavigation);
+
+    function stickyNavigation(){
+       const body = $("body");
+
+      if($(window).scrollTop() >= navTop){
+         body.css("padding-top", nav.outerHeight() + "px");
+         body.addClass("fixedNav");
+      }else{
+         body.css("padding-top", 0);
+          body.removeClass("fixedNav");
+      }
+   }
 });
